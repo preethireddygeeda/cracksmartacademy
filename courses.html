@@ -1,0 +1,735 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      position: relative;
+      width: 250px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons .info {
+      background-color: #ccc;
+    }
+
+    .buttons .start {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .hover-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover .hover-details {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .hover-details ul {
+      padding-left: 20px;
+    }
+
+    .hover-details ul li {
+      margin-bottom: 10px;
+    }
+    .footer {
+            background-color: green; 
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .footer div {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer div h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .footer div p, .footer div a {
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer div a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .social-icons a {
+            margin-right: 10px;
+        }
+
+        .footer .social-icons a img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-bottom {
+            background-color: #003919; 
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+  </style>
+</head>
+<body class="bg-gray-100">
+    
+    <nav id="navbar" class="bg-black text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">
+
+
+    <img src="static/logo2.png" alt="MyLogo" style="height:60px; width:auto;"> 
+
+</div>
+<div class="space-x-6">
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('courses') }}">Courses</a>
+<a href="{{ url_for('about') }}">About</a>
+
+<a href="{{ url_for('contact') }}">Contact</a>
+
+
+</div>
+</div>
+</nav>
+
+<br>
+<br>
+<br>
+
+<h1 class="text-5xl text-gray-800 text-center" style="font-family: 'Times New Roman', serif;">Our Courses</h1>
+<br>
+<br>
+
+<div class="card-container">
+  
+ 
+  <div class="card">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.HurP1HuppuCHciee6_oZxwHaE7&pid=Api&P=0&h=180/250x150" alt="Caregiving Course">
+    <div class="card-content">
+      <div class="card-title">Diploma in Caregiving</div>
+      <div class="buttons">
+        <button class="info">More Info</button>
+        <button class="start">Start Learning</button>
+      </div>
+    </div>
+    <div class="hover-details">
+      <ul>
+        <li>Fundamental roles & responsibilities</li>
+        <li>Legal issues caregivers face</li>
+        <li>Prevent the spread of infection</li>
+        <li>Take correct emergency actions</li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="card">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.HurP1HuppuCHciee6_oZxwHaE7&pid=Api&P=0&h=180/250x150" alt="HACCP Course">
+    <div class="card-content">
+      <div class="card-title">HACCP Food Safety</div>
+      <div class="buttons">
+        <button class="info">More Info</button>
+        <button class="start">Start Learning</button>
+      </div>
+    </div>
+    <div class="hover-details">
+      <ul>
+        <li>Understand HACCP principles</li>
+        <li>Identify hazards in food handling</li>
+        <li>Develop safety procedures</li>
+        <li>Maintain hygiene standards</li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="card">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.HurP1HuppuCHciee6_oZxwHaE7&pid=Api&P=0&h=180" alt="Asbestos Awareness">
+    <div class="card-content">
+      <div class="card-title">Asbestos Awareness</div>
+      <div class="buttons">
+        <button class="info">More Info</button>
+        <button class="start">Start Learning</button>
+      </div>
+    </div>
+    <div class="hover-details">
+      <ul>
+        <li>What is asbestos and where is it found</li>
+        <li>Health risks and symptoms</li>
+        <li>Safe handling techniques</li>
+        <li>Protective equipment usage</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.HurP1HuppuCHciee6_oZxwHaE7&pid=Api&P=0&h=180" alt="Asbestos Awareness">
+    <div class="card-content">
+      <div class="card-title">Asbestos Awareness</div>
+      <div class="buttons">
+        <button class="info">More Info</button>
+        <button class="start">Start Learning</button>
+      </div>
+    </div>
+    <div class="hover-details">
+      <ul>
+        <li>What is asbestos and where is it found</li>
+        <li>Health risks and symptoms</li>
+        <li>Safe handling techniques</li>
+        <li>Protective equipment usage</li>
+      </ul>
+    </div></div>
+    <div class="card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.HurP1HuppuCHciee6_oZxwHaE7&pid=Api&P=0&h=180" alt="Asbestos Awareness">
+        <div class="card-content">
+          <div class="card-title">Asbestos Awareness</div>
+          <div class="buttons">
+            <button class="info">More Info</button>
+            <button class="start">Start Learning</button>
+          </div>
+        </div>
+        <div class="hover-details">
+          <ul>
+            <li>What is asbestos and where is it found</li>
+            <li>Health risks and symptoms</li>
+            <li>Safe handling techniques</li>
+            <li>Protective equipment usage</li>
+          </ul>
+        </div></div>
+        <div class="card">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.HurP1HuppuCHciee6_oZxwHaE7&pid=Api&P=0&h=180" alt="Asbestos Awareness">
+            <div class="card-content">
+              <div class="card-title">Asbestos Awareness</div>
+              <div class="buttons">
+                <button class="info">More Info</button>
+                <button class="start">Start Learning</button>
+              </div>
+            </div>
+            <div class="hover-details">
+              <ul>
+                <li>What is asbestos and where is it found</li>
+                <li>Health risks and symptoms</li>
+                <li>Safe handling techniques</li>
+                <li>Protective equipment usage</li>
+              </ul>
+            </div></div>
+<br>
+<br>
+<br>
+</div> <div class="footer" style="display: flex; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 2px dotted #aaa;">
+    <div style="flex: 1; border-right: 2px dotted #aaa; padding-right: 20px;">
+        <h3>CRACKSMART ACADEMY</h3>
+        <p>CrackSmart Academy – Empowering Gen Z to crack careers with confidence and smart skills.</p>
+    </div>
+
+    <div style="flex: 1; border-right: 2px dotted #aaa; padding: 0 20px;">
+       
+      <p>  <a href="{{ url_for('home') }}">Home</a></p>
+      <p> <a href="{{ url_for('courses') }}">Courses</a></p>
+     <p> <a href="{{ url_for('about') }}">About</a></p>
+       
+      <p>  <a href="{{ url_for('contact') }}">Contact</a></p>
+        
+    </div>
+
+    <div style="flex: 1; padding-left: 20px;">
+      
+        <h3>Call Us :<p>+91 8309916906</p></h3>
+        <h3>Mail: <a href="mailto:CracksmartAcademy@gmail.com">CracksmartAcademy@gmail.com</a></h3>
+    </div>
+</div>
+
+<div class="footer-bottom" style="text-align: center; padding-top: 10px;">
+    &copy; 2025 CRACKSMART ACADEMY. All Rights Reserved. 
+    
+</div>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+      gap: 20px;
+      justify-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      position: relative;
+      width: 350px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons .info {
+      background-color: #ccc;
+    }
+
+    .buttons .start {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .hover-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      pointer-events: none; /* Important: disable pointer events when hidden */
+  z-index: 1;
+    }
+    .card-content,
+.buttons {
+  position: relative;
+  z-index: 2; /* Ensure they're above hover-details */
+}
+    .card:hover .hover-details {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .hover-details ul {
+      padding-left: 20px;
+    }
+
+    .hover-details ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background-color: rgb(45, 60, 45); 
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .footer div {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .footer div h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .footer div p, .footer div a {
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer div a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer .social-icons a {
+      margin-right: 10px;
+    }
+
+    .footer .social-icons a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer-bottom {
+      background-color: #0a0d0b; 
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .footer-bottom a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+    
+    <nav id="navbar" class="bg-black text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">
+                <img src="logo2.png" alt="MyLogo" style="height:60px; width:auto;"> 
+            </div>
+            <div class="space-x-6">
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+<br>
+<br>
+<br>
+    <h1 class="text-5xl text-gray-800 text-center" style="font-family: 'Times New Roman', serif;">Our Courses</h1>
+    <br><br>
+
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.8wj7fPGzGcZDuMFKV6Gf7AHaEI&pid=Api&P=0&h=180" alt="Caregiving Course">
+            <div class="card-content">
+                <div class="card-title">Placement Preparation Programs</div>
+                <p class="course-description"> The course covers resume building, mock interviews, aptitude tests, and soft skills to prepare students for campus placements.
+                </p>
+                <br><div class="buttons">
+                  <!-- More Info Button (Navigates to Contact Page) -->
+                  <a href="contact.html">
+                    <button class="info">More Info</button>
+                  </a>
+                  <!-- Start Learning Button (Opens WhatsApp) -->
+                  <button class="start" onclick="openWhatsApp()">Start Learning</button>
+                </div>
+            </div>
+            <div class="hover-details">
+                <ul>
+                    <li>Programming Essentials (C, C++, Java, Python)</li>
+                    <li>Data Structures & Algorithms (DSA)</li>
+                    <li>Aptitude & Reasoning</li>
+                    <li>SQL & Database Concepts</li>
+                    <!-- <li>Web Development (Mini Project)</li>
+                    <li>Communication & Soft Skills</li>
+                    <li>Resume & Interview Mastery -->
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.v8maHhquey3WXnUHhfyG_gHaEc&pid=Api&P=0&h=180" alt="HACCP Course">
+            <div class="card-content">
+                <div class="card-title">Competitive Exams Coaching</div>
+                <!-- <div class="buttons">
+                    <button class="info">More Info</button>
+                    <button class="start">Start Learning</button>
+                </div> -->
+                <p class="course-description">Prepares students for competitive exams such as GRE, GATE, CAT, by focusing on subjects like Quantitative Aptitude, Logical Reasoning, and Verbal Ability.</p>
+                <div class="buttons">
+                  <!-- More Info Button (Navigates to Contact Page) -->
+                  <a href="contact.html">
+                    <button class="info">More Info</button>
+                  </a>
+                  <!-- Start Learning Button (Opens WhatsApp) -->
+                  <button class="start" onclick="openWhatsApp()">Start Learning</button>
+                </div>
+            </div>
+            <div class="hover-details">
+                <ul>
+                    <li>UPSC Civil Services Foundation</li>
+                    <li>GATE Technical Booster (ECE, CSE, ME, EE, CE)</li>
+                    <li>CAT Prep – MBA Entrance
+
+                    </li>
+                    <li>GRE Power Prep (Study Abroad)</li>
+                    <!-- <li>IELTS/TOEFL Training</li>
+                    <li>SSC CGL, CHSL, MTS Coaching
+
+                    </li>
+                    <li>RRB, LIC, State PSC Coaching</li> -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="it.jpeg" alt="Asbestos Awareness">
+            <div class="card-content">
+                <div class="card-title">Technical & IT Certification Courses
+                </div>
+                <p class="course-description">Gain industry-recognized certifications in IT, including cloud computing, networking, and programming, to boost your career in technology.</p>
+                <div class="buttons">
+                  <!-- More Info Button (Navigates to Contact Page) -->
+                  <a href="contact.html">
+                    <button class="info">More Info</button>
+                  </a>
+                  <!-- Start Learning Button (Opens WhatsApp) -->
+                  <button class="start" onclick="openWhatsApp()">Start Learning</button>
+                </div>
+            </div>
+            <div class="hover-details">
+                <ul>
+                    <li>Full Stack Web Development</li>
+                    <li>Python for Beginners to Advanced</li>
+                    <li>Java with Spring Boot</li>
+                    <li>Data Science & Machine Learning</li>
+                    <!-- <li>Cybersecurity Essentials</li>
+                    <li>Cloud Computing Basics (AWS/GCP/Azure)</li>
+                    <li>Git, GitHub & Version Control</li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+          <img src="aca.jpeg" alt="HACCP Course">
+          <div class="card-content">
+              <div class="card-title"> Academic Subject Training (College Students)
+              </div>
+              <p class="course-description">We offer specialized Academic Courses that provide in-depth knowledge and practical applications of subjects, ensuring you excel in exams and projects.</p>
+              <div class="buttons">
+                <!-- More Info Button (Navigates to Contact Page) -->
+                <a href="contact.html">
+                  <button class="info">More Info</button>
+                </a>
+                <!-- Start Learning Button (Opens WhatsApp) -->
+                <button class="start" onclick="openWhatsApp()">Start Learning</button>
+              </div>
+          </div>
+          <div class="hover-details">
+              <ul>
+                  <li>Engineering Subjects (Semester-wise)</li>
+                  <li>Mini/Final Year Project Guidance</li>
+                  <li>Programming Labs (C, Python, Java)</li>
+                  <li>DBMS, OS, CN, DAA</li>
+              </ul>
+          </div>
+      </div>
+      <div class="card">
+        <img src="soft.jpeg" alt="HACCP Course">
+        <div class="card-content">
+            <div class="card-title"> Soft Skills & Career Development
+            </div>
+            <p class="course-description">This course enhances communication, leadership, and interpersonal skills, preparing you for professional success</p>
+           
+           <br>
+           <br> <div class="buttons">
+              <!-- More Info Button (Navigates to Contact Page) -->
+              <a href="contact.html">
+                <button class="info">More Info</button>
+              </a>
+              <!-- Start Learning Button (Opens WhatsApp) -->
+              <button class="start" onclick="openWhatsApp()">Start Learning</button>
+            </div>
+        </div>
+        <div class="hover-details">
+            <ul>
+                <li>English Communication Skills</li>
+                <li>Personality Development</li>
+                <li>Public Speaking</li>
+                <li>Corporate Etiquette</li>
+                <!-- <li>Time Management</li>
+                <li>Leadership Skills</li>
+                <li>Personal Branding (LinkedIn, Resume)</li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="card">
+      <img src="ent.jpeg" alt="HACCP Course">
+      <div class="card-content">
+          <div class="card-title">Entrepreneurship & Freelancing Courses</div>
+          <p class="course-description">Develop essential business acumen, creative problem-solving, and strategic thinking to launch and grow your own venture.</p>
+          
+          <br><div class="buttons">
+            <!-- More Info Button (Navigates to Contact Page) -->
+            <a href="contact.html">
+              <button class="info">More Info</button>
+            </a>
+            <!-- Start Learning Button (Opens WhatsApp) -->
+            <button class="start" onclick="openWhatsApp()">Start Learning</button>
+          </div>
+      </div>
+      <div class="hover-details">
+          <ul>
+              <li>Starting a Startup (Basics for Students)</li>
+              <li>How to Become a Freelancer</li>
+              <li>Digital Marketing Fundamentals</li>
+              <li>Building Your Portfolio Website</li>
+              <!-- <li>Canva, Figma for Creatives -->
+
+              </li>
+          </ul>
+      </div>
+  </div>
+        <!-- Additional Cards can be added similarly -->
+    </div>
+
+    <div class="footer" style="display: flex; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 2px dotted #aaa;">
+        <div style="flex: 1; border-right: 2px dotted #aaa; padding-right: 20px;">
+            <h3>CRACKSMART ACADEMY</h3>
+            <p>CrackSmart Academy – Empowering Gen Z to crack careers with confidence and smart skills.</p>
+        </div>
+
+        <div style="flex: 1; border-right: 2px dotted #aaa; padding: 0 20px;">
+            <p>  <a href="index.html">Home</a></p>
+            <p> <a href="courses.html">Courses</a></p>
+            <p> <a href="about.html">About</a></p>
+            <p>  <a href="contact.html">Contact</a></p>
+        </div>
+
+        <div style="flex: 1; padding-left: 20px;">
+          <h3>Mail: <a href="mailto:CracksmartAcademy@gmail.com">CracksmartAcademy@gmail.com</a></h3>
+        </div>
+    </div>
+    
+    <div class="footer-bottom" style="text-align: center; padding-top: 10px;">
+        &copy; 2025 CRACKSMART ACADEMY. All Rights Reserved. 
+        
+    </div>
+    <script>
+      // Function to open WhatsApp with a predefined message
+      function openWhatsApp() {
+        const phoneNumber = "918309916906"; // CrackSmart's number
+    const message = "Hello CrackSmart Academy! I'm interested in your Placement Preparation Programs. Please share more details.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+      }
+    </script>
+    </body>
+    </html> 

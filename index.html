@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>CrackSmart Academy | Crack Interviews with Confidence</title>
+    <meta name="description" content="Your one-stop platform for coding, DSA, aptitude, SQL, and mock interview prep. CrackSmart Academy helps students prepare for placement success." />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         body {
+        overflow-x: hidden;
+    }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+         .zoom-box {
+            transition: transform 0.3s ease-in-out;
+        }
+        .zoom-box:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: rgb(45, 60, 45); 
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .footer div {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer div h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .footer div p, .footer div a {
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer div a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .social-icons a {
+            margin-right: 10px;
+        }
+
+        .footer .social-icons a img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-bottom {
+            background-color: #0a0d0b; 
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            position: relative;
+            width: 30%;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 10;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100 pt-20">
+
+   
+    
+    <nav id="navbar" class="bg-black text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">
+    
+    
+    <img src="logo2.png" alt="MyLogo" style="height:60px; width:auto;"> 
+    
+    </div>
+    <div class="space-x-6">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    
+    <a href="contact.html">Contact</a>
+    
+    
+    </div>
+    </div>
+    </nav>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="slides">
+          <img src="image.png" alt="Slide 1" width="100" height="50">
+        </div>
+        <div class="slides">
+          <img src="image2.png" alt="Slide 2" width="100" height="50">
+        </div>
+        <div class="slides">
+          <img src="image3.png" alt="Slide 3" width="100" height="50">
+        </div>
+      </div>
+    <!-- <section class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center"> -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center">
+
+        
+        <!-- <div class="md:w-1/2 text-center md:text-left fade-in"> -->
+           
+           <div>
+            <p class="text-5xl md:text-5xl font-extrabold text-gray-800 mb-4" style="font-family: 'Georgia', serif;">
+                "Empower Your Future with Knowledge!"
+              </p>
+
+            <p class="text-lg text-gray-600 mb-6">
+                Every great developer starts with a single step—or a single line of code.<br> 
+                At our center, we guide you from basics to brilliance.<br> 
+                Code confidently, create fearlessly, and level up with us.<br>
+                Start learning today and take the first step toward success.
+              </p>
+              
+            <div class="space-x-4">
+                <a href="courses.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">View Courses</a>
+                <a href="#" class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition " onclick="openWhatsApp()">Contact Us</a>
+               
+            </div>
+        </div>
+
+<!--       
+            <div class="md:w-1/2 flex flex-col items-center mt-6 md:mt-0 fade-in" style="transition-delay: 0.5s;">
+               
+                <img src="{{ url_for('static', filename='pr.jpg') }}" alt="Profile Image" class="w-full max-w-xs sm:max-w-md rounded-lg shadow-lg mb-4">
+
+                
+
+                
+                <div class="bg-white p-4 shadow-lg rounded-lg text-center w-64">
+                    <h2 class="text-lg font-bold">Preethi Reddy</h2>
+                    <p class="text-gray-600">CEO & FOUNDER OF CRACKSMART ACADEMY </p>
+                </div>
+            </div> -->
+            
+    </section>
+    
+   
+    <section id="courses" class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center">
+        <div ><h1 class="text-3xl sm:text-4xl md:text-5xl text-gray-800 font-serif">Our Courses</h1>
+
+            <!-- <h1 class="text-5xl  text-gray-800 style= font-family: 'Times new Roman', serif;">Our Courses</h1> -->
+            <br>
+         
+             
+          </div>
+          
+        <!-- <div class="grid md:grid-cols-3 gap-8 mt-10"> -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-10 w-full">
+
+            <div class="bg-white shadow-lg rounded-lg p-6 zoom-box">
+                <img src="pla.jpeg" alt="Course 1" class="w-full h-56 object-cover rounded-lg">
+                <h3 class="text-xl font-semibold mt-4">Placement Preparation Programs</h3>
+               <p>Our Placement Preparation course focuses on building essential skills like coding, problem-solving, and interview strategies to help you secure your dream job</p>
+                <ul class="text-gray-600 mt-2 text-left list-disc pl-5">
+                    <li>Programming Essentials (C, C++, Java, Python)
+
+                    </li>
+                    <li>Data Structures & Algorithms (DSA)
+
+                    </li>
+                    <li>Aptitude & Reasoning</li>
+                    <li>SQL & Database Concepts</li>
+                    <li>Web Development (Mini Project)</li>
+                    <li>Communication & Soft Skills</li>
+                    <li>Resume & Interview Mastery</li>
+                    <li>Mock Interviews & GD Prep</li>
+                </ul>
+       <p class="text-xl font-bold text-green-600 mt-4" >₹20,000</p>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-lg mt-2 hover:bg-blue-700 transition" onclick="openWhatsApp()">
+                    Contact
+                </button>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 zoom-box">
+                <img src="it.jpeg" alt="Course 2" class="w-full h-56 object-cover rounded-lg">
+                <h3 class="text-xl font-semibold mt-4">Technical & IT Certification Courses</h3>
+                <ul class="text-gray-600 mt-2 text-left list-disc pl-5">
+                    <li>Full Stack Web Development</li>
+                    <li>Python for Beginners to Advanced</li>
+                    <li>Data Science & Machine Learning</li>
+                    <li>Cybersecurity Essentials
+
+                    </li>
+                    <li>Cloud Computing Basics (AWS/GCP/Azure)</li>
+                    <li>Git, GitHub & Version Control</li>
+                </ul>
+                <br>
+                <!-- <p class="text-xl font-bold text-green-600 mt-4">₹25,000</p> -->
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-lg mt-2 hover:bg-blue-700 transition" onclick="openWhatsApp()">
+                    Contact
+                </button>
+            </div>
+
+          
+            <div class="bg-white shadow-lg rounded-lg p-6 zoom-box">
+                <img src="ent.jpeg" alt="Course 3" class="w-full h-56 object-cover rounded-lg">
+                <h3 class="text-xl font-semibold mt-4">Entrepreneurship & Freelancing Courses</h3>
+                <ul class="text-gray-600 mt-2 text-left list-disc pl-5">
+                    <li>Starting a Startup (Basics for Students)</li>
+                    <li> How to Become a Freelancer</li>
+                    <li>Digital Marketing Fundamentals</li>
+                    <li>Building Your Portfolio Website</li>
+                    <li>Canva, Figma for Creatives</li>
+                </ul>
+                <br>
+                <br>
+                <!-- <p class="text-xl font-bold text-green-600 mt-4">₹2,999</p> -->
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-lg mt-2 hover:bg-blue-700 transition" onclick="openWhatsApp()">
+                    Contact
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="flex justify-center" >
+    <a href="courses.html" 
+    class=" px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+   More courses
+ </a>
+ <br>
+    </div>
+
+    <section id="about" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 40px;">
+        <div style="max-width: 900px; margin: auto;">
+          <h2 style="font-size: 32px; color: #2c3e50; margin-bottom: 20px;">🔹 About <span style="color: #1abc9c;">CrackSmart Academy</span></h2>
+          
+          <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            At <strong>CrackSmart Academy</strong>, we believe that every student deserves the right guidance, the right skills, and the right opportunities to succeed. 
+            Founded by <strong>Preethi Reddy</strong>, CrackSmart was born from a vision to bridge the gap between academic learning and industry expectations.
+          </p>
+      
+          <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            We understand the challenges faced by students when stepping into the real world — especially when it comes to placements, interviews, and building confidence. 
+            That’s why our programs deliver <strong>end-to-end career readiness</strong> with a personal touch.
+          </p>
+      
+          <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            From mastering <strong>programming languages</strong> like C, C++, Java, and Python, to building expertise in <strong>Data Structures & Algorithms, SQL, and Aptitude</strong>, 
+            we ensure every learner builds a rock-solid foundation. What makes us stand out is our hands-on learning – with <strong>real-time projects in Web Development and Artificial Intelligence</strong>, students gain practical experience that sets them apart in interviews.
+          </p>
+      
+          <ul style="font-size: 18px; line-height: 1.8; color: #333; margin-left: 20px;">
+            <li>✅ Resume building & LinkedIn optimization</li>
+            <li>✅ Mock interviews and group discussion training</li>
+            <li>✅ One-on-one mentorship & personalized feedback</li>
+          </ul>
+      
+          <p style="font-size: 18px; line-height: 1.8; color: #333;">
+            At CrackSmart Academy, you don't just learn — you evolve. We’re not just training you for a job; we’re preparing you for a career. 
+            With hundreds of success stories already, we’re on a mission to <strong>empower the next generation of smart, skilled, and confident professionals</strong>.
+          </p>
+      
+          <p style="font-size: 20px; color: #1abc9c; font-weight: bold; margin-top: 30px;">
+            Join us today — let’s crack the code to your success together. 🚀
+          </p>
+        </div>
+      </section>
+      
+   
+    <section class="bg-gray-100 py-10">
+        <div class="text-center mb-8">
+   
+        <h2 class="text-4xl font-bold text-gray-800 mb-2">Join Us</h2>
+      
+        <p class="text-lg text-gray-600 mb-8">Stay connected with us on social media</p>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-8">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/cracksmart-academy-b00041360/" target="_blank" class="flex flex-col items-center group">
+            <img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn" class="w-16 h-16 transition transform group-hover:scale-110">
+            <span class="text-gray-700 mt-2 text-lg">LinkedIn</span>
+          </a>
+      
+          <!-- WhatsApp -->
+          <a href="https://wa.me/8309916906" target="_blank" class="flex flex-col items-center group">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="WhatsApp" class="w-16 h-16 transition transform group-hover:scale-110">
+            <span class="text-gray-700 mt-2 text-lg">WhatsApp</span>
+          </a>
+      
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/cracksmart_academy?igsh=cGJycmF3czFxZ2Zp" target="_blank" class="flex flex-col items-center group">
+            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram" class="w-16 h-16 transition transform group-hover:scale-110">
+            <span class="text-gray-700 mt-2 text-lg">Instagram</span>
+          </a>
+      
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/channel/UCUvOg7Mq9YwrXnmA5SikNpg" target="_blank" class="flex flex-col items-center group">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YouTube" class="w-16 h-16 transition transform group-hover:scale-110">
+            <span class="text-gray-700 mt-2 text-lg">YouTube</span>
+          </a>
+        </div>
+      </section>
+      
+
+
+      
+  
+
+    <script>
+        let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".fade-in").forEach(element => {
+                element.classList.add("visible");
+            });
+        });
+        function openWhatsApp() {
+            window.open("https://wa.me/918309916906", "_blank"); 
+        }
+
+       
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeElements = document.querySelectorAll(".fade-in");
+
+            function checkPosition() {
+                fadeElements.forEach((el) => {
+                    const position = el.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (position < windowHeight - 100) {
+                        el.classList.add("visible");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkPosition);
+            checkPosition();
+        });
+      
+
+
+            
+    </script>
+   <div class="footer" style="display: flex; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 2px dotted #aaa;">
+    <div style="flex: 1; border-right: 2px dotted #aaa; padding-right: 20px;">
+        <h3>CRACKSMART ACADEMY</h3>
+        <p>CrackSmart Academy – Empowering Gen Z to crack careers with confidence and smart skills.</p>
+    </div>
+
+    <div style="flex: 1; border-right: 2px dotted #aaa; padding: 0 20px;">
+       
+      <p>  <a href="index.html">Home</a></p>
+      <p> <a href="courses.html">Courses</a></p>
+     <p> <a href="about.html">About</a></p>
+       
+      <p>  <a href="contact.html">Contact</a></p>
+        
+    </div>
+
+    <div style="flex: 1; padding-left: 20px;">
+      
+        <h3>Call Us :<p>+91 8309916906</p></h3>
+        <h3>Mail: <a href="mailto:cracksmartacademy@gmail.com">CracksmartAcademy@gmail.com</a></h3>
+    </div>
+</div>
+
+<div class="footer-bottom" style="text-align: center; padding-top: 10px;">
+    &copy; 2025 CRACKSMART ACADEMY. All Rights Reserved. 
+  
+</div>
+
+</body>
+</html>
